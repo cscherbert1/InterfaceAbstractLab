@@ -5,7 +5,7 @@ package lab2;
  * @author cscherbert1
  */
 public interface Course {
-    //no properties, interfaces can't have them
+    //no properties, interfaces can't have them, methods are abstract
     
     public abstract void setPrerequisites(String prerequisites);
     

@@ -1,4 +1,6 @@
-package lab1;
+package lab2;
+
+import lab1.*;
 
 /**
  *Create a startup class to test your code. In this startup class create 
