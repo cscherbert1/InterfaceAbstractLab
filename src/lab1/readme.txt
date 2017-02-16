@@ -14,9 +14,9 @@ Objectives for Lab #1:
      (TIP: implement (concrete) methods that should not change and declare them 
       final; if a method has the potential for being overridden in the 
       sub-class, declare that method abstract)
-   * Observe the Open/Closed Principle
-   * Make sure you throw new IllegalArgumentException if validation fails
-   * Use the Liskov Substitution Principle for greater flexibility.
+   *IGNORE: Observe the Open/Closed Principle
+   *IGNORE: Make sure you throw new IllegalArgumentException if validation fails
+   *IGNORE: Use the Liskov Substitution Principle for greater flexibility.
 
 Instructions for Lab #1:
 ----------------------
