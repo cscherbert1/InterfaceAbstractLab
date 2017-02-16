@@ -9,9 +9,9 @@ Objectives for Lab #2:
      encapsulation (declaring properties private, e.g.) and placement of
      common members. You may have to move some things around, remove things
      and/or create new things to make this work better.
-   * Observe the Open/Closed Principle
-   * Make sure you throw new IllegalArgumentException if validation fails
-   * Use the Liskov Substitution Principle for greater flexibility.
+   *IGNORE: Observe the Open/Closed Principle
+   *IGNORE: Make sure you throw new IllegalArgumentException if validation fails
+   *IGNORE: Use the Liskov Substitution Principle for greater flexibility.
 
 Instructions for Lab #2:
 ----------------------
