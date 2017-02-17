@@ -14,11 +14,28 @@ public class IntroToProgrammingCourse extends Course{
 //    private String courseNumber;
 //    private double credits;
 //    private String prerequisites;
+    
+    private String raspberryPiCartNumber;
 
-    public IntroToProgrammingCourse(String courseName, String courseNumber, String prerequisite) {
+    public IntroToProgrammingCourse(String courseName, String courseNumber, double credits, String prerequisite, String raspberryPiCartNumber) {
         this.setCourseName(courseName);
         this.setCourseNumber(courseNumber);
+        this.setCredits(credits);
         this.setPrerequisites(prerequisite);
+        this.setRaspberryPiCartNumber(raspberryPiCartNumber);
+    }
+    
+    public String getRaspberryPiCartNumber() {
+        return raspberryPiCartNumber;
+    }
+
+    public void setRaspberryPiCartNumber(String raspberryPiCartNumber) {
+        if(raspberryPiCartNumber == null || raspberryPiCartNumber.length() == 0) {
+            JOptionPane.showMessageDialog(null,
+                    "Error: raspberryPiCartNumber cannot be null of empty string");
+            System.exit(0);
+        }
+        this.raspberryPiCartNumber = raspberryPiCartNumber;
     }
 
 //    public String getCourseNumber() {
@@ -59,6 +76,8 @@ public class IntroToProgrammingCourse extends Course{
 //        }
 //        this.courseName = courseName;
 //    }
+
+
 
 
     

@@ -17,20 +17,23 @@ public class Startup {
     }
     public void addClasses(){
         
-        IntroToProgrammingCourse ip = new IntroToProgrammingCourse("Introduction to Programming", "152-107", "None");
-        ip.setCredits(2.0);
-        IntroJavaCourse ij = new IntroJavaCourse("Java Programming", "152-134", "Introduction to Programming and Math & Logic");
-        ij.setCredits(4.0);
-        AdvancedJavaCourse aj = new AdvancedJavaCourse("Advanced Java Programming", "152-135", "Java Programming and Database Concepts");
-        aj.setCredits(4.0);
+        IntroToProgrammingCourse ip = new IntroToProgrammingCourse("Introduction to Programming", "152-107", 2.0, "None", "C-1");
+        IntroJavaCourse ij = new IntroJavaCourse("Java Programming", "152-134", 4.0, "Introduction to Programming and Math & Logic");
+        AdvancedJavaCourse aj = new AdvancedJavaCourse("Advanced Java Programming", "152-135", 4.0, "Java Programming and Database Concepts");
+
 
         College college = new College();    
         
         
         
         college.addNewCourse(ip);
+        System.out.println("This course uses Raspberry Pi's. The cart number is: " + ip.getRaspberryPiCartNumber());
+        
         college.addNewCourse(ij);
+        ij.teachClassesContent();
+        
         college.addNewCourse(aj);
+        aj.teachInheritanceContent();
     }
    
     
