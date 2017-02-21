@@ -9,6 +9,7 @@ package lab1;
  * @author cscherbert1
  */
 public class Startup {
+    private ReportService reportService = new ReportService();
 
     public static void main(String[] args) {
         Startup start = new Startup();
@@ -27,10 +28,12 @@ public class Startup {
         
         
         college.addNewCourse(ip);
-        System.out.println("This course uses Raspberry Pi's. The cart number is: " + ip.getRaspberryPiCartNumber());
+        reportService.addData("This course uses Raspberry Pi's. The cart number is: " + ip.getRaspberryPiCartNumber());
+        reportService.outputReport();
+        reportService.clearReport();
         
         college.addNewCourse(ij);
-        ij.teachClassesContent();
+        ij.teachBasicsOfProgrammingWithClasses();
         
         college.addNewCourse(aj);
         aj.teachInheritanceContent();

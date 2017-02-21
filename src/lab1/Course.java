@@ -8,6 +8,8 @@ public abstract class Course {
     private double credits;
     private String prerequisites;
     
+    private ReportService rs = new ReportService();
+    
     /*
     Getters and setters are all concrete. Tried to make them abstract,
     but was unable to access the relative fields because they were private in Course. 
@@ -17,8 +19,8 @@ public abstract class Course {
     public void setPrerequisites(String prerequisites) {
         if (prerequisites == null || prerequisites.length() == 0) {
             JOptionPane.showMessageDialog(null,
-                    "Error: prerequisites cannot be null of empty string");
-            System.exit(0);
+                "Error: prerequisites cannot be null of empty string");
+        System.exit(0);
         }
         this.prerequisites = prerequisites;
     }

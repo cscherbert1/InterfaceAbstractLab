@@ -9,6 +9,7 @@ import javax.swing.JOptionPane;
  * @version     1.00
  */
 public class AdvancedJavaCourse extends Course{
+    private ReportService reportService = new ReportService();
 //    private String courseName;
 //    private String courseNumber;
 //    private double credits;
@@ -22,7 +23,12 @@ public class AdvancedJavaCourse extends Course{
     }
     
     public void teachInheritanceContent(){
-        System.out.println("This course teaches students about the joys of inheritence.");
+        reportService.addData("This course teaches students about the joys of inheritence.");
+    }
+    
+    public void outputInheritenceContentReport(){
+        reportService.outputReport();
+        reportService.clearReport();
     }
 
 //    public String getPrerequisites() {

@@ -9,10 +9,16 @@ import java.util.ArrayList;
 public class College {
     //List keeps track of all courses at the college
     private ArrayList<Course> courseInventory = new ArrayList<>();
+    private ReportService reportService = new ReportService();
     
     public void addNewCourse(Course course){
         courseInventory.add(course);
-        System.out.println("New course added for this semester: " + course.getCourseName());
+        reportService.addData("New course added for this semester: " + course.getCourseName());
+    }
+    
+    public void outputNewCourseReport(){
+        reportService.outputReport();
+        reportService.clearReport();
     }
     
 }

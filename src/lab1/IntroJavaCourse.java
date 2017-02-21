@@ -19,7 +19,7 @@ public class IntroJavaCourse extends Course{
         this.setPrerequisites(prerequisite);
     }
     
-    public void teachClassesContent(){
+    public void teachBasicsOfProgrammingWithClasses(){
         System.out.println("This course teaches students how to write classes in their programs.");
     }
 
