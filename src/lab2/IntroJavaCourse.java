@@ -13,6 +13,7 @@ public class IntroJavaCourse implements Course{
     private String courseNumber;
     private double credits;
     private String prerequisites;
+    private ReportService reportService = new ReportService();
 
     public IntroJavaCourse(String courseName, String courseNumber, double credits, String prerequisite) {
         this.setCourseName(courseName);
@@ -21,8 +22,13 @@ public class IntroJavaCourse implements Course{
         this.setPrerequisites(prerequisite);
     }
     
-        public void teachClassesContent(){
-        System.out.println("This course teaches students how to write classes in their programs.");
+    public void teachClassesContent(){
+       reportService.addData("This course teaches students how to write classes in their programs.");
+    }
+    
+    public void outputClassesContentReport(){
+        reportService.outputReport();
+        reportService.clearReport();
     }
 
 //    public String getCourseNumber() {

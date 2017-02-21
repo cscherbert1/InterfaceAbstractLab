@@ -7,6 +7,7 @@ package lab1;
  * @version     1.00
  */
 public class IntroJavaCourse extends Course{
+    private ReportService reportService = new ReportService();
 //    String courseName;
 //    private String courseNumber;
 //    double credits;
@@ -20,7 +21,12 @@ public class IntroJavaCourse extends Course{
     }
     
     public void teachBasicsOfProgrammingWithClasses(){
-        System.out.println("This course teaches students how to write classes in their programs.");
+        reportService.addData("This course teaches students how to write classes in their programs.");
+    }
+    
+    public void outputProgrammingWithClassesReport(){
+        reportService.outputReport();
+        reportService.clearReport();
     }
 
 //    public String getCourseNumber() {

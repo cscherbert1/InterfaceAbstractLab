@@ -15,6 +15,7 @@ public class IntroToProgrammingCourse implements Course{
     private String prerequisites;
     private String raspberryPiCartNumber;
 
+
     public IntroToProgrammingCourse(String courseName, String courseNumber, double credits, String prerequisite, String raspberryPiCartNumber) {
         this.setCourseName(courseName);
         this.setCourseNumber(courseNumber);

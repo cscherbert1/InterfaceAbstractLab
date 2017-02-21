@@ -13,6 +13,7 @@ public class AdvancedJavaCourse implements Course{
     private String courseNumber;
     private double credits;
     private String prerequisites;
+    private ReportService reportService = new ReportService();
 
     public AdvancedJavaCourse(String courseName, String courseNumber, double credits, String prerequisite) {
         this.setCourseName(courseName);
@@ -21,8 +22,13 @@ public class AdvancedJavaCourse implements Course{
         this.setPrerequisites(prerequisite);
     }
     
-        public void teachInheritanceContent(){
-        System.out.println("This course teaches students about the joys of inheritence.");
+    public void teachInheritanceContent(){
+        reportService.addData("This course teaches students about the joys of inheritence.");
+    }
+    
+    public void outputInheritenceContentReport(){
+        reportService.outputReport();
+        reportService.clearReport();
     }
 
 //    public String getCourseNumber() {
